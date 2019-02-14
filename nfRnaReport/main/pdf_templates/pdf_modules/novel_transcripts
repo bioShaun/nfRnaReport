@@ -1,0 +1,8 @@
+\BLOCK{ from 'plots_table' import plot,table }
+\BLOCK{ if novel_tr_table_path }
+\section{新转录本预测}
+我们使用 Scallop\cite{shao2017accurate}(Shao, Mingfu et al. 2017)软件，将比对到基因组 reads 组装成转录本，之后使用StringTie\cite{pertea2016transcript}(Pertea et al. 2016)软件对组装结果进行合并，最后通过与参考基因组注释的比较，提取与当前已知基因没有位置重叠关系的转录本作为本次试验预测得到的新转录本，并使用 Swiss-Prot 数据库对其进行功能注释 ("--"代表没有在数据库中比对到序列相似的蛋白数据)。下表展示了部分新转录本的结果：
+\href{run:result/assembly/}{查看全部新转录本结果}
+\VAR{ table(novel_tr_begin, novel_tr_head, novel_tr_body, caption='新转录本信息表') }
+\newpage
+\BLOCK{ endif }

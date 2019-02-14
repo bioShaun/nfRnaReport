@@ -1,0 +1,29 @@
+\BLOCK{ from 'plots_table' import plot,table }
+\BLOCK{ if rmats_bar_plot }
+\section{差异可变剪切分析}
+rMATS\cite{shen2014rmats}(Shen, Shihao et al. 2014) 通过分析5种可变剪切事件在两组样品中外显子 Inclusion Level 上的差异反应两组样品可变剪切的差异。
+\\
+\\
+\\
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.40\textwidth]{\VAR{rmaths_path}}
+\caption{5种可变剪切事件} \label{fig:graph}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.60\textwidth]{\VAR{rmaths_inclusion_path}}
+\caption{Exon Inclusion Level} \label{fig:graph}
+\end{figure}
+
+\newpage
+
+Inclusion Level 在不同分组间的差异如下图所示 (JC, JCEC 分别代表只使用 Junction reads 和使用全部 reads 分析的结果。)：
+\href{run:result/rmats/}{查看全部rMATS分析结果}
+\\
+\\
+\VAR{ plot(rmats_bar_plot, caption='Inclusion Level差异统计柱状图', plot_size=0.6) }
+\newpage
+\BLOCK{ endif }

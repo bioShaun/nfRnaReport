@@ -1,0 +1,8 @@
+\BLOCK{ from 'plots_table' import plot,table }
+\BLOCK{ if ppi_table_path }
+\section{差异基因蛋白互作分析}
+研究蛋白之间的相互作用网络，有助于挖掘核心的调控基因。STRING\cite{szklarczyk2014string}(Szklarczyk, Damian et al. 2014) 数据库覆盖了5090个物种，超过2400万蛋白的互作数据。我们从 STRING 数据库中提取出本次试验中差异表达基因之间的蛋白互作关系，如下表所示：
+\href{run:result/ppi/}{查看全部差异基因蛋白互作分析结果}
+\VAR{ table(ppi_begin, ppi_head, ppi_body, caption='差异基因蛋白互作列表', size='\\footnotesize') }
+\newpage
+\BLOCK{ endif }

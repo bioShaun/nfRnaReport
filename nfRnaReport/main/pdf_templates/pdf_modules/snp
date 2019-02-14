@@ -1,0 +1,8 @@
+\BLOCK{ from 'plots_table' import plot,table }
+\BLOCK{ if snp_table_path }
+\section{SNP分析}
+我们使用 GATK\cite{mckenna2010genome}(McKenna, Aaron et al. 2010) 软件进行 SNP 分析，并使用SnpEff\cite{cingolani2012program}软件对发现的 SNP 位点进行注释和统计，分析结果如下表所示：
+\href{run:result/snp/}{查看全部SNP分析结果}
+\VAR{ table(snp_begin, snp_head, snp_body, caption='SNP 信息列表', size='\\footnotesize') }
+\newpage
+\BLOCK{ endif }

@@ -1,0 +1,9 @@
+\BLOCK{ from 'plots_table' import plot,table }
+\BLOCK{ if transfactor_number_table_path }
+\section{差异基因转录因子分析}
+我们使用 AnimalTFDB\cite{hu2018animaltfdb}(Hu, Hui et al. 2018)数据库，对差异基因中的转录因子进行注释，结果如下所示：
+\href{run:result//}{查看差异基因转录因子结果}
+\VAR{ table(tr_num_begin, tr_num_head, tr_num_body, caption='差异基因转录因子数目统计表') }
+\VAR{ table(tr_detail_begin, tr_detail_head, tr_detail_body, caption='差异基因转录因子列表', size='\\footnotesize') }
+\newpage
+\BLOCK{ endif }

@@ -1,0 +1,110 @@
+%%%------mRNA_report version3.0 template------%%%
+%%%create on 2016-11-1
+%%%changed on 2017-02-24
+%%%changed on 2017-03-09
+%%%changed on 2017-06-13
+%%%changed on 2017-06-14 将每一个分析模块整合成一个单独页面
+%%% add each analysis if-end block on 2017-06-19 %%%
+%%%------------------------------------------%%%
+\BLOCK{ include 'pdf_modules/pdf_head' }
+\newpage
+\BLOCK{ include 'pdf_modules/analysis_process' ignore missing }
+\newpage
+
+\BLOCK{ if data_stat }
+\BLOCK{ include 'pdf_modules/data_stat' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if mapping }
+\BLOCK{ include 'pdf_modules/mapping' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if data_control }
+\BLOCK{ include 'pdf_modules/data_control' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if nr_assembly }
+\BLOCK{ include 'pdf_modules/nr_assembly' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if novel_tr }
+\BLOCK{ include 'pdf_modules/novel_transcripts' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+
+\BLOCK{ if quant }
+\BLOCK{ include 'pdf_modules/quant' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if diff }
+\BLOCK{ include 'pdf_modules/diff' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if enrichment }
+\BLOCK{ include 'pdf_modules/enrichment' ignore missing }
+\newpage
+\BLOCK{ endif }
+
+\BLOCK{ if transfactor }
+\BLOCK{ include 'pdf_modules/transfactor' ignore missing }
+\newpage
+\BLOCK{ endif } 
+
+\BLOCK{ if rmats }
+\BLOCK{ include 'pdf_modules/rmats' ignore missing }
+\newpage
+\BLOCK{ endif } 
+
+\BLOCK{ if snp }
+\BLOCK{ include 'pdf_modules/snp' ignore missing }
+\newpage
+\BLOCK{ endif } 
+
+\BLOCK{ if ppi }
+\BLOCK{ include 'pdf_modules/ppi' ignore missing }
+\newpage
+\BLOCK{ endif } 
+
+
+\section{附录}
+\subsection{软件列表}
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{\label{tab:table}软件列表}
+\begin{tabular}{lllll}
+\toprule
+名称 & 版本 & 功能 & 链接 \\
+\midrule
+fastp & 0.19.5 & 数据质控 & \href{https://github.com/OpenGene/fastp}{https://github.com/OpenGene/fastp} \\
+HISAT2 & 2.1.0 & 参考序列对比 & \href{https://ccb.jhu.edu/software/hisat2/index.shtml}{https://ccb.jhu.edu/software/hisat2/index.shtml} \\
+Scallop & v0.10.2 & 转录组拼接 & \href{https://github.com/Kingsford-Group/scallop}{https://github.com/Kingsford-Group/scallop} \\
+StringTie & 1.3.3b & 转录组拼接 & \href{https://ccb.jhu.edu/software/stringtie/}{https://ccb.jhu.edu/software/stringtie/} \\
+RSeQC & v2.6.4 & RNA数据质控 & \href{http://rseqc.sourceforge.net/}{http://rseqc.sourceforge.net/} \\
+Kallisto & 0.43.1 & 转录本定量 & \href{http://pachterlab.github.io/kallisto/}{https://pachterlab.github.io/kallisto/} \\
+edgeR & 3.12.1 & 差异分析 & \href{http://bioinf.wehi.edu.au/edgeR/}{http://bioinf.wehi.edu.au/edgeR/}\\
+goseq & 1.22.0 & GO 富集分析 & \href{http://bioconductor.org/packages/goseq/}{http://bioconductor.org/packages/goseq/}\\
+topGO & 2.22.0  & GO 富集 DAG 绘制 & \href{http://bioconductor.org/packages/topGO/}{http://bioconductor.org/packages/topGO/}\\
+KOBAS & 2.0 & KEGG Pathway 富集分析 & \href{http://kobas.cbi.pku.edu.cn/index.php}{http://kobas.cbi.pku.edu.cn/index.php}\\
+rMATS & 4.0.2 & 可变剪切分析 & \href{http://rnaseq-mats.sourceforge.net/index.html}{http://rnaseq-mats.sourceforge.net/index.html}\\
+GATK & 4.0.10.1 & SNP分析 & \href{https://software.broadinstitute.org/gatk/}{https://software.broadinstitute.org/gatk/}\\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%------reference--------%
+\newpage
+\subsection{参考文献}
+\renewcommand\refname{}
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
