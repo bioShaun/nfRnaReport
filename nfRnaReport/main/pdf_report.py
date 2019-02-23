@@ -388,6 +388,7 @@ def create_pdf_report(generate_report_path, part):
         address=pdf_settings['address'],
         phone=pdf_settings['phone'],
         logo_path=pdf_settings['logo_path'],
+        cover_path=pdf_settings['cover_path'],
         pipeline_path=pdf_settings['pipeline_path'],
         mRNAworkflow_path=pdf_settings['mRNAworkflow_path'],
         rmaths_path=pdf_settings['rmaths_path'],

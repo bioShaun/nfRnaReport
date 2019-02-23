@@ -60,6 +60,8 @@ max_cell_len = command.get('mRNA-pdf-info', 'max_cell_len')
 project_name = command.get('mRNA-pdf-info', 'project_name')
 logo_path = os.path.join(CFG_DIR, command.get(
     'mRNA-pdf-static', 'logo_path'))
+cover_path = os.path.join(CFG_DIR, command.get(
+    'mRNA-pdf-static', 'cover_path'))
 pipeline_path = os.path.join(CFG_DIR, command.get(
     'mRNA-pdf-static', 'pipeline_path'))
 mRNAworkflow_path = os.path.join(CFG_DIR, command.get(
@@ -234,6 +236,7 @@ pdf_settings = {'address': address,
                 'table_rows': table_rows,
                 'max_cell_len': max_cell_len,
                 'logo_path': logo_path,
+                'cover_path': cover_path,
                 'project_name': project_name,
                 'pipeline_path': pipeline_path,
                 'mRNAworkflow_path': mRNAworkflow_path,
